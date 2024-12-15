@@ -6,6 +6,8 @@ In this tutorial I will be showing you how to mount a File Share on a Windows ma
 
 > <sub>To get started, you first need to have a Microsoft Azure account. If you don't have one, you can create a free account [here.](https://azure.microsoft.com/en-us/free/search/?&ef_id=_k_Cj0KCQiA4NWrBhD-ARIsAFCKwWv39zVXs4ww7bj_IGmTJngZol8ZX835NOuvRgv7ygSk_rEe9lnrcGcaAg2vEALw_wcB_k_&OCID=AIDcmm5edswduu_SEM__k_Cj0KCQiA4NWrBhD-ARIsAFCKwWv39zVXs4ww7bj_IGmTJngZol8ZX835NOuvRgv7ygSk_rEe9lnrcGcaAg2vEALw_wcB_k_&gad_source=1&gclid=Cj0KCQiA4NWrBhD-ARIsAFCKwWv39zVXs4ww7bj_IGmTJngZol8ZX835NOuvRgv7ygSk_rEe9lnrcGcaAg2vEALw_wcB)</sub>
 
+## Storage Account Setup
+
 Once you get logged into Azure, we will either create a new resource group or navigate to one that we will want our resource to live.
 
 Click "Create" within our resource group and search for a storage account in the Azure services search bar, then click create a storage account.
@@ -26,3 +28,19 @@ If you would like to read more about storage accounts in general, [click here](h
 ![alt text](<imgs/Screenshot 2024-12-13 at 8.25.36 PM.png>)
 
 We will not be changing any other settings within our storage account for our example, so click "Review and Create" and create the storage account.
+
+## File Share Setup
+
+Once the storage account is finished setting up, click into the storage account. On the left hand side scroll down to "Data Storage" then select "File Share" and create a file share.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.01.02 AM.png>)
+
+Name your file share and select the access tier you will be using for you storage account. If you want to read more on access tiers, [click here](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview).
+
+For the sake of our example I will be sticking with "Hot", which is used for data that is accessed or modified frequently.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.02.02 AM.png>)
+
+**IMPORTANT** - Make sure you setup the correct "Backup" settings when creating your file share. For this example we will disable it totally to keep the ease of deleting all our resources after creation.
+
+Now click "review and create" to create the file share.
