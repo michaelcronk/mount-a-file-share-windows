@@ -41,6 +41,6 @@ For the sake of our example I will be sticking with "Hot", which is used for dat
 
 ![alt text](<imgs/Screenshot 2024-12-15 at 9.02.02 AM.png>)
 
-**IMPORTANT** - Make sure you setup the correct "Backup" settings when creating your file share. For this example we will disable it totally to keep the ease of deleting all our resources after creation.
+**IMPORTANT** - Make sure you setup the correct "Backup" settings when creating your file share. For this example we will disable it totally to keep the ease of deleting all our resources after creation. Read more about backups and how they work [here](https://learn.microsoft.com/en-us/azure/backup/blob-backup-configure-manage?tabs=operational-backup).
 
 Now click "review and create" to create the file share.
