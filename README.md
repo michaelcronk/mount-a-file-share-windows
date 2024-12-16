@@ -44,3 +44,20 @@ For the sake of our example I will be sticking with "Hot", which is used for dat
 **IMPORTANT** - Make sure you setup the correct "Backup" settings when creating your file share. For this example we will disable it totally to keep the ease of deleting all our resources after creation. Read more about backups and how they work [here](https://learn.microsoft.com/en-us/azure/backup/blob-backup-configure-manage?tabs=operational-backup).
 
 Now click "review and create" to create the file share.
+
+## Storage Account Network Access
+
+Before connecting the file share to our VM, we need to first make sure our network connections to the storage account are correct.
+
+For good practice we don't leave our resources open for all of the internet to access.
+
+> **Why We Don't Allow "Access From Every Network"**  
+> Leaving your file share open to "allow access from everyone" means anyone on the internet can try to access our files. This creates serious security risks, including:
+>
+> - **Unauthorized access**: Hackers or malicious users could view, edit, or even delete your files if they get in.
+> - **Data breaches**: Sensitive data can be easily leaked or stolen.
+> - **Compliance issues**: You might violate regulations or company policies.
+>
+> What we do instead is restrict access using **network security rules**, such as adding a private IP range, using a firewall, or using Azure Active Directory authentication. This ensures only authorized users and systems can access our files.
+
+## Connecting the File Share
