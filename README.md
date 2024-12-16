@@ -53,7 +53,7 @@ For good practice we don't leave our resources open for all of the internet to a
 
 > **Why We Don't Allow "Access From Every Network"**
 >
-> Leaving your storage account open to "allow access from everyone" means anyone on the internet can try to access our data. This creates serious security risks, including:
+> Leaving your storage account open to "allow access from everyone" means anyone on the internet can try to access your data. This creates serious security risks, including:
 >
 > - **Unauthorized access**: Hackers or malicious users could view, edit, or even delete your files if they get in.
 > - **Data breaches**: Sensitive data can be easily leaked or stolen.
