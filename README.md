@@ -47,17 +47,31 @@ Now click "review and create" to create the file share.
 
 ## Storage Account Network Access
 
-Before connecting the file share to our VM, we need to first make sure our network connections to the storage account are correct.
+Before connecting the file share to our VM, we need to first make sure our network connections for the storage account are correct.
 
 For good practice we don't leave our resources open for all of the internet to access.
 
-> **Why We Don't Allow "Access From Every Network"**  
-> Leaving your file share open to "allow access from everyone" means anyone on the internet can try to access our files. This creates serious security risks, including:
+> **Why We Don't Allow "Access From Every Network"**
+>
+> Leaving your storage account open to "allow access from everyone" means anyone on the internet can try to access our data. This creates serious security risks, including:
 >
 > - **Unauthorized access**: Hackers or malicious users could view, edit, or even delete your files if they get in.
 > - **Data breaches**: Sensitive data can be easily leaked or stolen.
 > - **Compliance issues**: You might violate regulations or company policies.
 >
-> What we do instead is restrict access using **network security rules**, such as adding a private IP range, using a firewall, or using Azure Active Directory authentication. This ensures only authorized users and systems can access our files.
+> What we do instead is restrict access using **network security rules**, such as adding a private IP range, use a firewall, or use Azure Active Directory authentication. This ensures only authorized users and systems can access our files.
+
+For our example we will be adding a Virtual Network (VNET) that our VM is accessible through.
+
+1. While clicked into your storage account, scroll down to "Security and Networking" > "Networking".
+2. Select "Enable from selected virtual networks and IP addresses".
+3. Under the Virtual Networks section, select "Add existing virtual network".
+4. Select which subscription, VNET, and subnet your VM is in.
+5. Click "Add" to add your VNET to the whitelist.
+6. When finished, click "Save" in the top left.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.05.11 AM.png>)
+
+If you are adding an IP Address through the firewall settings, you can read more about how to do that [here](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-networking-endpoints?tabs=azure-portal).
 
 ## Connecting the File Share
