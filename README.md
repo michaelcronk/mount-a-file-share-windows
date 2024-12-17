@@ -75,3 +75,35 @@ For our example we will be adding a Virtual Network (VNET) that our VM is access
 If you are adding an IP Address through the firewall settings, you can read more about how to do that [here](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-networking-endpoints?tabs=azure-portal).
 
 ## Connecting the File Share
+
+Once the file share is created, find it under "Data storage" > "File shares" and click into the one you just created.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.09.13 AM.png>)
+
+When you are inside your file share and on the overview page, click on connect in the top left.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.09.32 AM.png>)
+
+After clicking connect, the connection panel will pop up on the right side of the screen, allowing you to select which OS you want to mount the file share to, for our example we will be mounting the file share to a Windows VM, so we select "Windows".
+
+We then select a "Drive letter" for the file share and whether you want to connect to it using a "Storage account key" or "Active Directory or Microsoft Entra".
+
+We will be using a "Storage account key" for our example because this is a testing environment with no real data involved, but make sure you know the risks and understand both options by reading [this article](https://learn.microsoft.com/en-us/azure/storage/common/authorize-data-access?tabs=blobs).
+
+**Recommendation:** Use **Active Directory/Microsoft Entra** for production environments to enhance security and manage access control.
+
+Below is the comparison of **AD/Entra ID** to a **Storage Account Key**
+
+> ### Authentication Methods: Active Directory/Microsoft Entra vs. Storage Account Key
+>
+> When connecting an **Azure File Share** to a Windows computer, you can use one of the following methods:
+>
+> | **Aspect**           | **Active Directory/Microsoft Entra**            | **Storage Account Key**               |
+> | -------------------- | ----------------------------------------------- | ------------------------------------- |
+> | **Authentication**   | Uses user identity via AD/Entra ID.             | Uses account key for direct access.   |
+> | **Security**         | More secure (integrates with user permissions). | Less secure (key grants full access). |
+> | **Use Case**         | Enterprises with existing AD/Entra integration. | Quick setups or testing environments. |
+> | **Setup Complexity** | Higher (requires domain integration).           | Lower (key is directly available).    |
+> | **Access Control**   | Granular (per user/group).                      | Full access to the file share.        |
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.10.07 AM.png>)
