@@ -122,7 +122,7 @@ When PowerShell ISE opens, click on "View" in the top left of the application an
 
 ![alt text](<imgs/Screenshot 2024-12-15 at 9.12.18 AM.png>)
 
-Once the scripting pane is visible and open, paste the script you just copied previously from the file share connection tab in the Azure portal.
+Once the scripting pane is visible and open, paste the script you just copied previously from the file share connection tab in the Azure portal into the Script Pane.
 
 You can save the file and click on the green play button, as highlighted below.
 
