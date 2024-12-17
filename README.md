@@ -106,4 +106,30 @@ Below is the comparison of **AD/Entra ID** to a **Storage Account Key**
 > | **Setup Complexity** | Higher (requires domain integration).           | Lower (key is directly available).    |
 > | **Access Control**   | Granular (per user/group).                      | Full access to the file share.        |
 
+With the "Storage account key" selected, we will scroll down and click on the "Show Script" button.
+
 ![alt text](<imgs/Screenshot 2024-12-15 at 9.10.07 AM.png>)
+
+You will then need to copy the script that is created. Then you can connect to your Windows machine and we can begin the process of connecting the file share.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.10.23 AM.png>)
+
+When you are on the Windows machine that you wish to have the file share connected to, click on the start menu and search for "PowerShell ISE" and right click to select "Run as Administrator". If you would like to learn more about the PowerShell Integrated Scripting Environment, [click here](https://learn.microsoft.com/en-us/powershell/scripting/windows-powershell/ise/introducing-the-windows-powershell-ise?view=powershell-7.4).
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.11.17 AM.png>)
+
+When PowerShell ISE opens, click on "View" in the top left of the application and make sure "Show Script Pane" is selected.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.12.18 AM.png>)
+
+Once the scripting pane is visible and open, paste the script you just copied previously from the file share connection tab in the Azure portal.
+
+You can save the file and click on the green play button, as highlighted below.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.12.39 AM.png>)
+
+When the script is finished running you will see a message shown below in the PowerShell Console saying whether the file share has been connected or if it has failed.
+
+In our case, we have received the message saying that the file share was connected successfully.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.13.06 AM.png>)
