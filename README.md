@@ -149,3 +149,9 @@ We can then head back into our file share inside of the Azure portal and click "
 As you can see below, the folder and file has been connected and stored on Azure.
 
 ![alt text](<imgs/Screenshot 2024-12-15 at 9.15.01 AM.png>)
+
+**WARNING** - If you were doing this for testing purposes, make sure to go back through and clean up your resources. Click [here](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/delete-resource-group?tabs=azure-powershell) to learn more.
+
+## Feedback
+
+You can now setup a file share on Azure and connect a Windows machine. If you have and feedback or suggestions, you can always open an issue or submit a pull request. Thank you!
