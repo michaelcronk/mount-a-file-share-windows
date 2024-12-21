@@ -133,3 +133,19 @@ When the script is finished running you will see a message shown below in the Po
 In our case, we have received the message saying that the file share was connected successfully.
 
 ![alt text](<imgs/Screenshot 2024-12-15 at 9.13.06 AM.png>)
+
+## Testing the File Share
+
+Now that the file share is connected, we can test the connection. If we navigate the the File Explorer on our Microsoft machine and select "This PC", we can see that our file share, "mountafilesharefs", has been connected and is active on our system.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.13.26 AM.png>)
+
+We can click into the file share and create a test folder and file to see if it will transmit the data to Azure using the Server Message Block (SMB) protocol.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.13.56 AM.png>)
+
+We can then head back into our file share inside of the Azure portal and click "Browse" to check the files that are being stored.
+
+As you can see below, the folder and file has been connected and stored on Azure.
+
+![alt text](<imgs/Screenshot 2024-12-15 at 9.15.01 AM.png>)
